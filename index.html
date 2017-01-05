@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="WenBin">
+
+    <title>IFTTT HTML 5</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            padding-top: 50px;
+            font-family: "Avenir Next W01", "Avenir Next", "Avenir", helvetica, arial, sans-serif;
+        }
+        
+        .flex-container {
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: .5em 0;
+            font-weight: 700;
+            font-size: 5em;
+        }
+        
+        .flex-item {
+            padding: 5px;
+            text-align: center;
+            margin: 0 .125em;
+        }
+        
+        .plus {
+            display: inline-block;
+            padding: .25em .375em;
+            color: white;
+            font-size: .6em;
+            line-height: 1;
+            border-radius: .125em;
+            background-color: #09f;
+            margin: 0 0.25em;
+            font-weight: 800;
+        }
+        
+        .this-item {
+            display: flex;
+            align-items: center;
+            color: #09f;
+        }
+        
+        a.this-item:link {
+            text-decoration: none;
+            color: #09f;
+        }
+        
+        a.this-item:visited {
+            text-decoration: none;
+            color: #09f;
+        }
+        
+        a.this-item::active {
+            text-decoration: none;
+            color: #09f;
+        }
+        
+        @media only screen and (min-width: 768px) {
+            .flex-container {
+                flex-direction: row;
+                justify-content: center;
+                margin-top: 100px;
+            }
+        }
+        
+        @media only screen and (min-width: 1448px) {
+            .flex-container {
+                font-size: 8em;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="flex-container">
+            <div class="flex-item">if</div>
+            <a href="list-of-service.html" class="flex-item this-item"><span class="plus">+</span> this
+            </a>
+            <div class="flex-item">then</div>
+            <div class="flex-item">that</div>
+        </div>
+    </div>
+    <!-- /.container -->
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

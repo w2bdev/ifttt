@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="WenBin">
+
+    <title>IFTTT HTML 5</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #fff;
+            color: #333;
+            max-width: 100%;
+            overflow-x: hidden;
+            font-family: "Avenir Next W01", "Avenir Next", "Avenir", helvetica, arial, sans-serif;
+            font-weight: 500;
+            font-size: 20px;
+        }
+        
+        .action-wrapper {
+            margin-top: 2em;
+        }
+        
+        .action-wrapper .btn-back {
+            border-radius: 25px;
+        }
+        
+        .logo {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-size: 50%;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0 20px;
+        }
+        
+        .flex-container {
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: .5em 0;
+            font-weight: 700;
+            font-size: 5em;
+        }
+        
+        .flex-item {
+            padding: 5px;
+            text-align: center;
+            margin: 0 .125em;
+        }
+        
+        .plus {
+            display: inline-block;
+            padding: .25em .375em;
+            color: white;
+            font-size: .6em;
+            line-height: 1;
+            border-radius: .125em;
+            background-color: #09f;
+            margin: 0 0.25em;
+            font-weight: 800;
+        }
+        
+        .that-item {
+            display: flex;
+            align-items: center;
+            color: #09f;
+        }
+        
+        a.that-item:link {
+            text-decoration: none;
+            color: #09f;
+        }
+        
+        a.that-item:visited {
+            text-decoration: none;
+            color: #09f;
+        }
+        
+        a.that-item::active {
+            text-decoration: none;
+            color: #09f;
+        }
+        
+        @media only screen and (min-width: 768px) {
+            .flex-container {
+                flex-direction: row;
+                justify-content: center;
+                margin-top: 100px;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="action-wrapper">
+            <a href="configure-service-trigger.html" class="btn btn-default btn-back">
+                <i class="glyphicon glyphicon-chevron-left" aria-hidden="true"></i> Back
+            </a>
+        </div>
+        <div class="flex-container">
+            <div class="flex-item">if</div>
+            <div class="flex-item"><span class="logo" style="background-color:#ec7505;background-image:url('https://assets.ifttt.com/images/channels/4/icons/on_color_regular.png');"></span></div>
+            <div class="flex-item">then</div>
+            <a href="list-of-service.1.html" class="flex-item that-item"><span class="plus">+</span> that
+            </a>
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+        });
+    </script>
+</body>
+
+</html>

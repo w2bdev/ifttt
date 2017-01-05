@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="WenBin">
+
+    <title>IFTTT HTML 5</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #fff;
+            color: #333;
+            max-width: 100%;
+            font-family: "Avenir Next W01", "Avenir Next", "Avenir", helvetica, arial, sans-serif;
+            font-weight: 500;
+            font-size: 20px;
+        }
+        
+        .header-wrapper h1 {
+            font-weight: 700;
+        }
+        
+        .action-wrapper {
+            margin-top: 2em;
+        }
+        
+        .action-wrapper .btn-back {
+            border-radius: 25px;
+        }
+        
+        .search-input {
+            border: 0.25em solid #eee;
+            border-radius: 0.5em;
+            background: white;
+            box-sizing: border-box;
+        }
+        
+        .search-input .input-group-addon {
+            border: none;
+            background-color: #fff;
+        }
+        
+        .search-input .form-control {
+            border: none;
+        }
+        
+        ul.service-grid {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-flex-wrap: wrap;
+            -moz-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            -moz-justify-content: center;
+            justify-content: center;
+            margin-top: 2em;
+        }
+        
+        li.service-item {
+            cursor: pointer;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-flex: 0;
+            -webkit-flex: 0 0 20%;
+            -moz-box-flex: 0;
+            -moz-flex: 0 0 20%;
+            -ms-flex: 0 0 20%;
+            flex: 0 0 20%;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            -moz-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: stretch;
+            -ms-flex-align: stretch;
+            -webkit-align-items: stretch;
+            -moz-align-items: stretch;
+            align-items: stretch;
+            display: list-item;
+            text-align: -webkit-match-parent;
+        }
+        
+        li.service-item a {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-flex: 1;
+            -webkit-flex-grow: 1;
+            -moz-flex-grow: 1;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+            -ms-flex-pack: distribute;
+            -webkit-justify-content: space-around;
+            -moz-justify-content: space-around;
+            justify-content: space-around;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            -moz-align-items: center;
+            align-items: center;
+            padding: .375em;
+        }
+        
+        .service-content {
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            padding: .375em;
+        }
+        
+        .service-content img {
+            display: block;
+            margin: 0 auto;
+            max-width: 50%;
+            max-height: 50%;
+        }
+        
+        .service-content span {
+            display: block;
+            margin-top: 2em;
+            color: #fff;
+            line-height: 1.1;
+            text-align: center;
+            font-size: .7em;
+        }
+        
+        .container-fluid {
+            padding: 0;
+            margin: 0;
+        }
+        
+        @media only screen and (min-width: 1720px) {
+            li.service-item {
+                -webkit-flex: 0 0 10%;
+                -moz-box-flex: 0;
+                -moz-flex: 0 0 10%;
+                -ms-flex: 0 0 10%;
+                flex: 0 0 10%;
+            }
+        }
+        
+        @media only screen and (min-width: 1280px) and (max-width:1720px) {
+            li.service-item {
+                -webkit-flex: 0 0 15%;
+                -moz-box-flex: 0;
+                -moz-flex: 0 0 15%;
+                -ms-flex: 0 0 15%;
+                flex: 0 0 15%;
+            }
+        }
+        
+        @media only screen and (max-width: 768px) {
+            li.service-item {
+                -webkit-flex: 0 0 25%;
+                -moz-box-flex: 0;
+                -moz-flex: 0 0 25%;
+                -ms-flex: 0 0 25%;
+                flex: 0 0 25%;
+            }
+        }
+        
+        @media only screen and (max-width: 510px) {
+            li.service-item {
+                -webkit-flex: 0 0 33.3333%;
+                -moz-box-flex: 0;
+                -moz-flex: 0 0 33.3333%;
+                -ms-flex: 0 0 33.3333%;
+                flex: 0 0 33.3333%;
+            }
+        }
+        
+        @media only screen and (max-width: 510px) {
+            li.service-item {
+                -webkit-flex: 0 0 50%;
+                -moz-box-flex: 0;
+                -moz-flex: 0 0 50%;
+                -ms-flex: 0 0 50%;
+                flex: 0 0 50%;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="action-wrapper">
+            <a href="index.html" class="btn btn-default btn-back">
+                <i class="glyphicon glyphicon-chevron-left" aria-hidden="true"></i> Back
+            </a>
+        </div>
+        <div class="header-wrapper text-center">
+            <h1>Choose action service</h1>
+            <h6>Step 3 of 6</h6>
+            <div class="input-group search-input">
+                <div class="input-group-addon"><i class="glyphicon glyphicon-search" aria-hidden="true"></i></div>
+                <input type="text" class="form-control" placeholder="Search services">
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+    <div class="container-fluid">
+        <ul class="service-grid"></ul>
+    </div>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        var services = [{
+            title: "Pocket",
+            bColor: "#ef3e56",
+            imgUrl: "https://assets.ifttt.com/images/channels/24/icons/on_color_large.png",
+            target: ""
+        }, {
+            title: "Twitter",
+            bColor: "#00ABEC",
+            imgUrl: "https://assets.ifttt.com/images/channels/2/icons/on_color_large.png",
+            target: ""
+        }, {
+            title: "Date & Time",
+            bColor: "#333333",
+            imgUrl: "https://assets.ifttt.com/images/channels/3/icons/on_color_large.png",
+            target: ""
+        }, {
+            title: "Gmail",
+            bColor: "#23448b",
+            imgUrl: "https://assets.ifttt.com/images/channels/33/icons/on_color_large.png",
+            target: ""
+        }, {
+            title: "SMS",
+            bColor: "#29BF12",
+            imgUrl: "https://assets.ifttt.com/images/channels/5/icons/on_color_large.png",
+            target: ""
+        }, {
+            title: "Email",
+            bColor: "#2468ff",
+            imgUrl: "https://assets.ifttt.com/images/channels/6/icons/on_color_large.png",
+            target: "choose-action.html"
+        }, {
+            title: "Weather Underground",
+            bColor: "#1E2023",
+            imgUrl: "https://assets.ifttt.com/images/channels/7/icons/on_color_large.png",
+            target: ""
+        }, {
+            title: "Phone Call",
+            bColor: "#2132FF",
+            imgUrl: "https://assets.ifttt.com/images/channels/8/icons/on_color_large.png",
+            target: ""
+        }, {
+            title: "Delicious",
+            bColor: "#3274D0",
+            imgUrl: "https://assets.ifttt.com/images/channels/9/icons/on_color_large.png",
+            target: ""
+        }, {
+            title: "Facebook",
+            bColor: "#3B579D",
+            imgUrl: "https://assets.ifttt.com/images/channels/10/icons/on_color_large.png",
+            target: ""
+        }, ];
+
+        var cList = $('ul.service-grid')
+        $.each(services, function(index, object) {
+            var li = $('<li/>')
+                .css('background-color', object.bColor)
+                .addClass('service-item')
+                .appendTo(cList);
+            var aaa = $('<a href="' + object.target + '"/>')
+                .appendTo(li);
+            var dd = $('<div/>')
+                .addClass('service-content')
+                .appendTo(aaa);
+            var imgg = $('<img src="' + object.imgUrl + '"/>')
+                .appendTo(dd);
+            var sspan = $('<span>' + object.title + '</span>')
+                .appendTo(dd);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="WenBin">
+
+    <title>IFTTT HTML 5</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #fff;
+            color: #333;
+            max-width: 100%;
+            overflow-x: hidden;
+            font-family: "Avenir Next W01", "Avenir Next", "Avenir", helvetica, arial, sans-serif;
+            font-weight: 500;
+            font-size: 20px;
+        }
+        
+        .action-wrapper {
+            margin-top: 2em;
+        }
+        
+        .action-wrapper .btn-back {
+            border-radius: 25px;
+        }
+        
+        .trigger-wrapper {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-justify-content: center;
+            -moz-justify-content: center;
+            justify-content: center;
+            align-items: flex-end;
+            margin-top: 2em;
+        }
+        
+        .trigger-wrapper h1 {
+            font-weight: 700;
+        }
+        
+        .trigger-wrapper .logo {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            background-size: 50%;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0 20px;
+        }
+        
+        .service-triger-list {
+            margin-top: 2em;
+        }
+        
+        .service-triger-list .service-trigger-item {
+            background-color: #ec7505;
+            color: #fff;
+            border-radius: 10px;
+            padding: 1.5em;
+            margin: 1em;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+        
+        .service-trigger-item .title {
+            font-size: 1.125em;
+            font-weight: 600;
+            line-height: 1.125;
+            display: block;
+            padding-bottom: .57em;
+        }
+        
+        .service-trigger-item .description {
+            font-size: .8em;
+        }
+        
+        #new_feed {
+            cursor: pointer;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .trigger-wrapper {
+                -webkit-flex-direction: column;
+                -moz-flex-direction: column;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="action-wrapper">
+            <a href="list-of-service.html" class="btn btn-default btn-back">
+                <i class="glyphicon glyphicon-chevron-left" aria-hidden="true"></i> Back
+            </a>
+        </div>
+        <div class="header-wrapper text-center">
+            <div class="trigger-wrapper">
+                <span class="logo" style="background-color:#ec7505;background-image:url('https://assets.ifttt.com/images/channels/4/icons/on_color_regular.png');"></span>
+                <h1>Choose trigger</h1>
+            </div>
+            <h6>Step 2 of 6</h6>
+        </div>
+
+        <div class="row service-triger-list">
+            <div class="col-md-3 col-sm-4 service-trigger-item" id="new_feed">
+                <span class="title">New Feed Item</span>
+                <span class="description">This Trigger fires every time a new item is added to the feed you specify.</span>
+            </div>
+            <div class="col-md-3 col-sm-4 service-trigger-item">
+                <span class="title">New feed item matches</span>
+                <span class="description">This Trigger fires every time a new item in the feed you specify contains a particular keyword or simple phrase.</span>
+            </div>
+
+        </div>
+    </div>
+    <!-- /.container -->
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#new_feed").click(function() {
+                window.location.href = "configure-service-trigger.html";
+            });
+        });
+    </script>
+</body>
+
+</html>
