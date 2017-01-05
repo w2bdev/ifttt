@@ -1,0 +1,20 @@
+{
+  "name": "ifttt",
+  "description": "Signagelive Front End Developer Test",
+  "main": "index.js",
+  "authors": [
+    "WenBin Wong"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/w2bdev/ifttt",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
